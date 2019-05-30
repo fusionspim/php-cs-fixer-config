@@ -1,0 +1,10 @@
+/*.sublime-*
+/.idea
+*.map
+
+.DS_Store
+.php_cs.cache
+cs_fixer_tmp_*
+
+vendor
+composer.phar

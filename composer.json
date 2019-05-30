@@ -1,0 +1,13 @@
+{
+  "name": "fusionspim/php-cs-fixer-config",
+  "description": "Default configuration for friendsofphp/php-cs-fixer, as used by the Fusions PIM dev team",
+  "keywords": ["configuration", "php-cs-fixer"],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.2",
+    "friendsofphp/php-cs-fixer": "2.15.*"
+  },
+  "autoload": {
+    "psr-4": { "FusionsPim\\PhpCsFixer\\": "src" }
+  }
+}
