@@ -40,8 +40,8 @@ class Factory
         'no_singleline_whitespace_before_semicolons' => true,
         'no_superfluous_phpdoc_tags'                 => true,
         'no_trailing_comma_in_singleline_array'      => true,
-        'no_unneeded_control_parentheses'            => [
-            'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'], // we occasionally use around `return`
+        'no_unneeded_control_parentheses'            => [ // we occasionally use around `return`
+            'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
         'no_unused_imports'                          => true,
         'no_useless_else'                            => true,
