@@ -5,14 +5,9 @@ use PhpCsFixer\{Config, Finder};
 
 class Factory
 {
-    public const DEFAULT_EXCLUDED_DIRS = [
-        'assets',
-        'cache',
-        'node_modules',
-        'templates',
-        'tests/acceptance/_support/_generated',
-        'vendor',
-    ];
+    public const DEFAULT_EXCLUDED_DIRS = ['assets', 'cache', 'node_modules', 'templates', 'vendor'];
+
+    public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // annotated with @codingStandardsIgnoreFile
 
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
@@ -72,10 +67,15 @@ class Factory
 
     public static function fromDefaults(array $overrideRules = []): Config
     {
+        $finder = Finder::create()
+            ->in(getcwd())
+            ->exclude(static::DEFAULT_EXCLUDED_DIRS)
+            ->notName(static::DEFAULT_EXCLUDED_NAME);
+
         return Config::create() // @note: .php files are included by default so don't need specifying
             ->setRiskyAllowed(true)
             ->setRules(\array_merge(static::DEFAULT_RULES, $overrideRules))
             ->setUsingCache(true)
-            ->setFinder(Finder::create()->in(getcwd())->exclude(static::DEFAULT_EXCLUDED_DIRS));
+            ->setFinder($finder);
     }
 }

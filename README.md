@@ -24,7 +24,7 @@ return FusionsPim\PhpCsFixer\Factory::fromDefaults([
 ]);
 ```
 
-All `.php` files within your project root are checked (other than those in `Factory::DEFAULT_EXCLUDED_DIRS`) though `Finder` can easily be reconfigured for your project:
+All `.php` files within your project root are checked (other than those in `Factory::DEFAULT_EXCLUDED_DIRS` or named `Factory::DEFAULT_EXCLUDED_NAME`) though `Finder` can easily be reconfigured for your project:
 
 ```php
 <?php
