@@ -5,7 +5,7 @@ use PhpCsFixer\{Config, Finder};
 
 class Factory
 {
-    public const DEFAULT_EXCLUDED_DIRS = ['assets', 'cache', 'node_modules', 'templates', 'vendor'];
+    public const DEFAULT_EXCLUDED_DIRS = ['assets', 'cache', 'node_modules']; // PhpCsFixer excludes vendor already
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // annotated with @codingStandardsIgnoreFile
 
@@ -87,9 +87,10 @@ class Factory
         $finder = Finder::create()
             ->in(getcwd())
             ->exclude(static::DEFAULT_EXCLUDED_DIRS)
-            ->notName(static::DEFAULT_EXCLUDED_NAME);
+            ->notName(static::DEFAULT_EXCLUDED_NAME)
+            ->name('*.phtml'); // PhpCsFixer adds *.php already
 
-        return Config::create() // @note: .php files are included by default so don't need specifying
+        return Config::create()
             ->setRiskyAllowed(true)
             ->setRules(\array_merge(static::DEFAULT_RULES, $overrideRules))
             ->setUsingCache(true)
