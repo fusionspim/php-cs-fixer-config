@@ -88,7 +88,7 @@ class Factory
             ->in(getcwd())
             ->exclude(static::DEFAULT_EXCLUDED_DIRS)
             ->notName(static::DEFAULT_EXCLUDED_NAME)
-            ->name('*.phtml'); // PhpCsFixer adds *.php already
+            ->name('*.phtml'); // PhpCsFixer adds *.php and *.phpt already
 
         return Config::create()
             ->setRiskyAllowed(true)
