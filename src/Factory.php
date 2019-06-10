@@ -82,6 +82,7 @@ class Factory
         'unary_operator_spaces'                      => true,
         'void_return'                                => true,
         'whitespace_after_comma_in_array'            => true,
+        'yoda_style'                                 => false,
     ];
 
     public static function fromDefaults(array $overrideRules = []): Config
