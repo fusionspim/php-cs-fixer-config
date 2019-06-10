@@ -73,6 +73,7 @@ class Factory
         'php_unit_expectation'                       => true,
         'return_type_declaration'                    => true,
         'single_import_per_statement'                => false,
+        'single_line_comment_style'                  => true,
         'standardize_not_equals'                     => true,
         'ternary_operator_spaces'                    => true,
         'ternary_to_null_coalescing'                 => true,
