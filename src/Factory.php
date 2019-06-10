@@ -7,7 +7,7 @@ class Factory
 {
     public const DEFAULT_EXCLUDED_DIRS = ['assets', 'cache', 'node_modules']; // PhpCsFixer excludes vendor already
 
-    public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // annotated with @codingStandardsIgnoreFile
+    public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
     // @todo Ensuring there's a space after `//` would be nice, but there's no rule for that just yet :-)
     public const DEFAULT_RULES = [
@@ -39,7 +39,7 @@ class Factory
         'no_singleline_whitespace_before_semicolons' => true,
         'no_superfluous_phpdoc_tags'                 => true,
         'no_trailing_comma_in_singleline_array'      => true,
-        'no_unneeded_control_parentheses'            => [ // we occasionally use around `return`
+        'no_unneeded_control_parentheses'            => [ // We occasionally use around `return`
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
         'no_unused_imports'                          => true,
@@ -49,7 +49,7 @@ class Factory
         'no_whitespace_in_blank_line'                => true,
         'normalize_index_brace'                      => true,
         'not_operator_with_successor_space'          => true,
-        'ordered_class_elements'                     => [ // default, except we don't order methods for now
+        'ordered_class_elements'                     => [ // Default, except we don't order methods for now
             'use_trait',
             'constant_public',
             'constant_protected',
