@@ -9,6 +9,7 @@ class Factory
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // annotated with @codingStandardsIgnoreFile
 
+    // @todo Ensuring there's a space after `//` would be nice, but there's no rule for that just yet :-)
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
         'array_indentation'                          => true,
