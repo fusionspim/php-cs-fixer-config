@@ -10,7 +10,7 @@ class Factory
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
     // @todo: When https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3047 is merged, run and find gaps to plug
-    // @todo Ensuring a space after `//` gets mentioned, but there's no rule for that just yet :-)
+    // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480 since gets mentioned IN PR's
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
         'array_indentation'                          => true,
