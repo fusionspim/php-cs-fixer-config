@@ -11,6 +11,7 @@ class Factory
 
     // @todo: When https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3047 is merged, run and find gaps to plug
     // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480 since gets mentioned IN PR's
+    // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491 since gets mentioned IN PR's
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
         'array_indentation'                          => true,
