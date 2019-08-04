@@ -42,10 +42,8 @@ class Factory
         'no_mixed_echo_print'                        => ['use' => 'echo'],
         'no_singleline_whitespace_before_semicolons' => true,
         'no_spaces_around_offset'                    => true,
-        'no_spaces_inside_parenthesis'               => true, // Is default within @PSR2 anyway
         'no_superfluous_phpdoc_tags'                 => true,
         'no_trailing_comma_in_singleline_array'      => true,
-        'no_trailing_whitespace_in_comment'          => true, // Is default within @PSR2 anyway
         'no_unneeded_control_parentheses'            => [ // We occasionally use around `return`
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
