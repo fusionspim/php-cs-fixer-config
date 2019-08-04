@@ -9,7 +9,7 @@ class Factory
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
-    // @todo: When https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/3047 is merged, run and find gaps to plug
+    // @todo: Use https://mlocati.github.io/php-cs-fixer-configurator/#version:2.15|configurator and find gaps to plug
     // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480 since gets mentioned IN PR's
     // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491 since gets mentioned IN PR's
     public const DEFAULT_RULES = [
