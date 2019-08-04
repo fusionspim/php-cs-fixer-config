@@ -27,6 +27,7 @@ class Factory
         'dir_constant'                               => true,
         'function_to_constant'                       => true,
         'function_typehint_space'                    => true,
+        'include'                                    => true,
         'logical_operators'                          => true,
         'lowercase_cast'                             => true,
         'lowercase_static_reference'                 => true,
