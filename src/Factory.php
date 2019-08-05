@@ -18,6 +18,7 @@ class Factory
         'array_indentation'                          => true,
         'array_syntax'                               => ['syntax' => 'short'],
         'binary_operator_spaces'                     => ['default' => 'align_single_space'],
+        'blank_line_after_opening_tag'               => false, // We prefer the opposite to @PhpCsFixer
         'blank_line_before_statement'                => [
             'statements' => ['case', 'for', 'foreach', 'if', 'return', 'switch', 'try', 'while'],
         ],
@@ -38,7 +39,7 @@ class Factory
         'method_chaining_indentation'                => true,
         'mb_str_functions'                           => true,
         'modernize_types_casting'                    => true,
-        'new_with_braces'                            => false, // We prefer the opposite
+        'new_with_braces'                            => false, // We prefer the opposite to @PhpCsFixer
         'no_blank_lines_after_class_opening'         => true,
         'no_break_comment'                           => false,
         'no_empty_statement'                         => true,
