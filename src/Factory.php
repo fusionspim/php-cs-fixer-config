@@ -12,6 +12,7 @@ class Factory
     // @todo: Use https://mlocati.github.io/php-cs-fixer-configurator/#version:2.15|configurator and find gaps to plug
     // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480 since gets mentioned IN PR's
     // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491 since gets mentioned IN PR's
+    // @todo: Adopt the '@PhpCsFixer' preset (as the second rule), then remove inherited rules unless we differ
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
         'array_indentation'                          => true,
