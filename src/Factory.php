@@ -41,12 +41,12 @@ class Factory
         'modernize_types_casting'                    => true,
         'new_with_braces'                            => false, // We prefer the opposite to @PhpCsFixer
         'no_blank_lines_after_class_opening'         => true,
-        'no_break_comment'                           => false,
+        'no_break_comment'                           => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
         'no_empty_statement'                         => true,
         'no_extra_blank_lines'                       => ['tokens' => ['extra']],
         'no_homoglyph_names'                         => true,
         'no_mixed_echo_print'                        => ['use' => 'echo'],
-        'no_short_echo_tag'                          => false,
+        'no_short_echo_tag'                          => false, // We prefer the opposite to @PhpCsFixer
         'no_singleline_whitespace_before_semicolons' => true,
         'no_spaces_around_offset'                    => true,
         'no_superfluous_phpdoc_tags'                 => true,
@@ -95,7 +95,7 @@ class Factory
         'semicolon_after_instruction'                => true,
         'set_type_to_cast'                           => true,
         'short_scalar_cast'                          => true,
-        'single_import_per_statement'                => false,
+        'single_import_per_statement'                => false, // We like import grouping within the same namespace
         'single_line_comment_style'                  => true,
         'space_after_semicolon'                      => true,
         'standardize_increment'                      => true,
@@ -108,7 +108,7 @@ class Factory
         'unary_operator_spaces'                      => true,
         'void_return'                                => true,
         'whitespace_after_comma_in_array'            => true,
-        'yoda_style'                                 => false,
+        'yoda_style'                                 => false, // We prefer the opposite to @PhpCsFixer
     ];
 
     public static function fromDefaults(array $overrideRules = []): Config
