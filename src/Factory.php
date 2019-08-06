@@ -7,13 +7,18 @@ class Factory
 {
     public const DEFAULT_EXCLUDED_DIRS = ['assets', 'cache', 'node_modules']; // PhpCsFixer excludes vendor already
 
-    public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // annotated with @codingStandardsIgnoreFile
+    public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
+    // @todo: Use https://mlocati.github.io/php-cs-fixer-configurator/#version:2.15|configurator and find gaps to plug
+    // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480 since gets mentioned IN PR's
+    // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491 since gets mentioned IN PR's
+    // @todo: Adopt the '@PhpCsFixer' preset (as the second rule), then remove inherited rules unless we differ
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
         'array_indentation'                          => true,
         'array_syntax'                               => ['syntax' => 'short'],
         'binary_operator_spaces'                     => ['default' => 'align_single_space'],
+        'blank_line_after_opening_tag'               => false, // We prefer the opposite to @PhpCsFixer
         'blank_line_before_statement'                => [
             'statements' => ['case', 'for', 'foreach', 'if', 'return', 'switch', 'try', 'while'],
         ],
@@ -24,6 +29,8 @@ class Factory
         'dir_constant'                               => true,
         'function_to_constant'                       => true,
         'function_typehint_space'                    => true,
+        'include'                                    => true,
+        'logical_operators'                          => true,
         'lowercase_cast'                             => true,
         'lowercase_static_reference'                 => true,
         'magic_constant_casing'                      => true,
@@ -31,24 +38,34 @@ class Factory
         'method_argument_space'                      => ['on_multiline' => 'ignore'],
         'method_chaining_indentation'                => true,
         'mb_str_functions'                           => true,
+        'modernize_types_casting'                    => true,
+        'new_with_braces'                            => false, // We prefer the opposite to @PhpCsFixer
         'no_blank_lines_after_class_opening'         => true,
-        'no_break_comment'                           => false,
+        'no_break_comment'                           => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
+        'no_empty_statement'                         => true,
         'no_extra_blank_lines'                       => ['tokens' => ['extra']],
+        'no_homoglyph_names'                         => true,
         'no_mixed_echo_print'                        => ['use' => 'echo'],
+        'no_short_echo_tag'                          => false, // We prefer the opposite to @PhpCsFixer
         'no_singleline_whitespace_before_semicolons' => true,
+        'no_spaces_around_offset'                    => true,
         'no_superfluous_phpdoc_tags'                 => true,
         'no_trailing_comma_in_singleline_array'      => true,
-        'no_unneeded_control_parentheses'            => [ // we occasionally use around `return`
+        'no_unneeded_control_parentheses'            => [ // We occasionally use around `return`
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
+        'no_unneeded_curly_braces'                   => true,
+        'no_unset_cast'                              => true,
         'no_unused_imports'                          => true,
         'no_useless_else'                            => true,
         'no_useless_return'                          => true,
         'no_whitespace_before_comma_in_array'        => true,
         'no_whitespace_in_blank_line'                => true,
+        'non_printable_character'                    => false, // We have these in tests
         'normalize_index_brace'                      => true,
         'not_operator_with_successor_space'          => true,
-        'ordered_class_elements'                     => [ // default, except we don't order methods for now
+        'object_operator_without_whitespace'         => true,
+        'ordered_class_elements'                     => [ // Default, except we don't order methods for now
             'use_trait',
             'constant_public',
             'constant_protected',
@@ -71,15 +88,27 @@ class Factory
         'php_unit_strict'                            => true,
         'php_unit_no_expectation_annotation'         => true,
         'php_unit_expectation'                       => true,
+        'psr4'                                       => true,
+        'return_assignment'                          => true,
         'return_type_declaration'                    => true,
-        'single_import_per_statement'                => false,
+        'self_accessor'                              => true,
+        'semicolon_after_instruction'                => true,
+        'set_type_to_cast'                           => true,
+        'short_scalar_cast'                          => true,
+        'single_import_per_statement'                => false, // We like import grouping within the same namespace
+        'single_line_comment_style'                  => true,
+        'space_after_semicolon'                      => true,
+        'standardize_increment'                      => true,
         'standardize_not_equals'                     => true,
+        'strict_comparison'                          => true,
+        'ternary_operator_spaces'                    => true,
         'ternary_to_null_coalescing'                 => true,
         'trailing_comma_in_multiline_array'          => true,
         'trim_array_spaces'                          => true,
         'unary_operator_spaces'                      => true,
         'void_return'                                => true,
         'whitespace_after_comma_in_array'            => true,
+        'yoda_style'                                 => false, // We prefer the opposite to @PhpCsFixer
     ];
 
     public static function fromDefaults(array $overrideRules = []): Config
