@@ -2,6 +2,8 @@
 namespace FusionsPim\PhpCsFixer;
 
 use PhpCsFixer\{Config, Finder};
+use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, InternalClassCasingFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoUnneededConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, SingleSpaceBeforeStatementFixer};
+use PhpCsFixerCustomFixers\Fixers;
 
 class Factory
 {
@@ -121,8 +123,26 @@ class Factory
 
         return Config::create()
             ->setRiskyAllowed(true)
-            ->setRules(\array_merge(static::DEFAULT_RULES, $overrideRules))
+            ->registerCustomFixers(new Fixers)
+            ->setRules(\array_merge(static::DEFAULT_RULES, self::extraRules(), $overrideRules))
             ->setUsingCache(true)
             ->setFinder($finder);
+    }
+
+    // Hopefully these'll be merged into PHP CS Fixer? https://github.com/kubawerlos/php-cs-fixer-custom-fixers/issues/128
+    private static function extraRules(): array
+    {
+        return [
+            CommentSurroundedBySpacesFixer::name()            => true,
+            NoUnneededConcatenationFixer::name()              => true,
+            NoDuplicatedImportsFixer::name()                  => true,
+            InternalClassCasingFixer::name()                  => true,
+            NoPhpStormGeneratedCommentFixer::name()           => true,
+            NoUselessCommentFixer::name()                     => true,
+            NoUselessSprintfFixer::name()                     => true,
+            SingleSpaceBeforeStatementFixer::name()           => true,
+            NoUselessDoctrineRepositoryCommentFixer::name()   => true,
+            NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
+        ];
     }
 }

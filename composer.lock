@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "313c5ac68adfbad1ccb19f77d1c6b928",
+    "content-hash": "2d871b6b88eb04b24d7bf2971e66a793",
     "packages": [
         {
             "name": "composer/semver",
@@ -326,6 +326,58 @@
             ],
             "description": "A tool to automatically fix PHP code style",
             "time": "2019-05-06T07:13:51+00:00"
+        },
+        {
+            "name": "kubawerlos/php-cs-fixer-custom-fixers",
+            "version": "v1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers.git",
+                "reference": "e83abd5a30b06d7d4566b8aa43928725863bfd49"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/e83abd5a30b06d7d4566b8aa43928725863bfd49",
+                "reference": "e83abd5a30b06d7d4566b8aa43928725863bfd49",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "php": "^7.1",
+                "symfony/finder": "^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "infection/infection": "^0.13.3",
+                "johnkary/phpunit-speedtrap": "^3.1",
+                "kubawerlos/types-checker": "^1.1",
+                "phpunit/phpunit": "^7.4 || ^8.0",
+                "sebastian/diff": "^3.0",
+                "symfony/console": "^4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpCsFixerCustomFixers\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kuba Werłos",
+                    "email": "werlos@gmail.com"
+                }
+            ],
+            "description": "A set of custom fixers for PHP CS Fixer",
+            "keywords": [
+                "fixer",
+                "php-cs-fixer"
+            ],
+            "time": "2019-08-19T19:59:53+00:00"
         },
         {
             "name": "paragonie/random_compat",
