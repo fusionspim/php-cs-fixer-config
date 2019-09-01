@@ -12,8 +12,6 @@ class Factory
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
     // @todo: Use https://mlocati.github.io/php-cs-fixer-configurator/#version:2.15|configurator and find gaps to plug
-    // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480 since gets mentioned IN PR's
-    // @todo: Keep an eye on https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491 since gets mentioned IN PR's
     // @todo: Adopt the '@PhpCsFixer' preset (as the second rule), then remove inherited rules unless we differ
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
@@ -133,8 +131,8 @@ class Factory
     private static function extraRules(): array
     {
         return [
-            CommentSurroundedBySpacesFixer::name()            => true,
-            NoUnneededConcatenationFixer::name()              => true,
+            CommentSurroundedBySpacesFixer::name()            => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480
+            NoUnneededConcatenationFixer::name()              => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
             NoDuplicatedImportsFixer::name()                  => true,
             InternalClassCasingFixer::name()                  => true,
             NoPhpStormGeneratedCommentFixer::name()           => true,
