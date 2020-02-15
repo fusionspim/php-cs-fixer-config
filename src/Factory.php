@@ -2,7 +2,7 @@
 namespace FusionsPim\PhpCsFixer;
 
 use PhpCsFixer\{Config, Finder};
-use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, InternalClassCasingFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, SingleSpaceBeforeStatementFixer};
+use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, DataProviderReturnTypeFixer, InternalClassCasingFixer, NoCommentedOutCodeFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, PhpUnitNoUselessReturnFixer, PhpdocNoIncorrectVarAnnotationFixer, PhpdocSingleLineVarFixer, SingleSpaceAfterStatementFixer, SingleSpaceBeforeStatementFixer};
 use PhpCsFixerCustomFixers\Fixers;
 
 class Factory
@@ -175,7 +175,9 @@ class Factory
     {
         return [
             CommentSurroundedBySpacesFixer::name()            => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480
+            DataProviderReturnTypeFixer::name()               => true,
             InternalClassCasingFixer::name()                  => true,
+            NoCommentedOutCodeFixer::name()                   => true,
             NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
             NoDuplicatedImportsFixer::name()                  => true,
             NoPhpStormGeneratedCommentFixer::name()           => true,
@@ -183,6 +185,10 @@ class Factory
             NoUselessCommentFixer::name()                     => true,
             NoUselessDoctrineRepositoryCommentFixer::name()   => true,
             NoUselessSprintfFixer::name()                     => true,
+            PhpUnitNoUselessReturnFixer::name()               => true,
+            PhpdocNoIncorrectVarAnnotationFixer::name()       => true,
+            PhpdocSingleLineVarFixer::name()                  => true,
+            SingleSpaceAfterStatementFixer::name()            => true,
             SingleSpaceBeforeStatementFixer::name()           => true,
         ];
     }
