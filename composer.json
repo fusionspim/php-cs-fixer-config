@@ -5,7 +5,7 @@
   "license": "MIT",
   "require": {
     "php": ">=7.2",
-    "friendsofphp/php-cs-fixer": "2.15.*",
+    "friendsofphp/php-cs-fixer": "2.16.*",
     "kubawerlos/php-cs-fixer-custom-fixers": "^1.15"
   },
   "autoload": {

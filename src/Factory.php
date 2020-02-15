@@ -2,7 +2,7 @@
 namespace FusionsPim\PhpCsFixer;
 
 use PhpCsFixer\{Config, Finder};
-use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, InternalClassCasingFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoUnneededConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, SingleSpaceBeforeStatementFixer};
+use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, InternalClassCasingFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, SingleSpaceBeforeStatementFixer};
 use PhpCsFixerCustomFixers\Fixers;
 
 class Factory
@@ -179,7 +179,7 @@ class Factory
             NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
             NoDuplicatedImportsFixer::name()                  => true,
             NoPhpStormGeneratedCommentFixer::name()           => true,
-            NoUnneededConcatenationFixer::name()              => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
+            NoSuperfluousConcatenationFixer::name()           => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
             NoUselessCommentFixer::name()                     => true,
             NoUselessDoctrineRepositoryCommentFixer::name()   => true,
             NoUselessSprintfFixer::name()                     => true,
