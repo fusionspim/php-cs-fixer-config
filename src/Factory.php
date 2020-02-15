@@ -175,15 +175,15 @@ class Factory
     {
         return [
             CommentSurroundedBySpacesFixer::name()            => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480
-            NoUnneededConcatenationFixer::name()              => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
-            NoDuplicatedImportsFixer::name()                  => true,
             InternalClassCasingFixer::name()                  => true,
+            NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
+            NoDuplicatedImportsFixer::name()                  => true,
             NoPhpStormGeneratedCommentFixer::name()           => true,
+            NoUnneededConcatenationFixer::name()              => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
             NoUselessCommentFixer::name()                     => true,
+            NoUselessDoctrineRepositoryCommentFixer::name()   => true,
             NoUselessSprintfFixer::name()                     => true,
             SingleSpaceBeforeStatementFixer::name()           => true,
-            NoUselessDoctrineRepositoryCommentFixer::name()   => true,
-            NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
         ];
     }
 }
