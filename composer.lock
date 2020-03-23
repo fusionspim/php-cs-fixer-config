@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "64712bf0ac2e8d0e6d429e07860bfcce",
+    "content-hash": "f923aa36752d53efe53d292d13cfa2c9",
     "packages": [
         {
             "name": "composer/semver",
@@ -332,23 +332,27 @@
         },
         {
             "name": "kubawerlos/php-cs-fixer-custom-fixers",
-            "version": "v1.17.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers.git",
-                "reference": "1682fd94eefabdf31695bfff2c332680d3281bd0"
+                "reference": "59af5d2be00eb4ebd4d5d324ac5b9b777e623dba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/1682fd94eefabdf31695bfff2c332680d3281bd0",
-                "reference": "1682fd94eefabdf31695bfff2c332680d3281bd0",
+                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/59af5d2be00eb4ebd4d5d324ac5b9b777e623dba",
+                "reference": "59af5d2be00eb4ebd4d5d324ac5b9b777e623dba",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
                 "friendsofphp/php-cs-fixer": "^2.16.1",
-                "php": "^7.1",
+                "php": "^7.2",
                 "symfony/finder": "^3.0 || ^4.0 || ^5.0"
+            },
+            "require-dev": {
+                "johnkary/phpunit-speedtrap": "^3.2.0",
+                "phpunit/phpunit": "^8.5.2 || ^9.0.1"
             },
             "type": "library",
             "autoload": {
@@ -367,7 +371,7 @@
                 }
             ],
             "description": "A set of custom fixers for PHP CS Fixer",
-            "time": "2019-12-29T12:33:18+00:00"
+            "time": "2020-03-15T20:58:33+00:00"
         },
         {
             "name": "paragonie/random_compat",
