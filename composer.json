@@ -4,7 +4,7 @@
   "keywords": ["configuration", "php-cs-fixer"],
   "license": "MIT",
   "require": {
-    "php": ">=7.2",
+    "php": ">=7.4",
     "friendsofphp/php-cs-fixer": "2.16.*",
     "kubawerlos/php-cs-fixer-custom-fixers": "^2.1.0"
   },
