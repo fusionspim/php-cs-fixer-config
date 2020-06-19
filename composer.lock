@@ -369,27 +369,27 @@
         },
         {
             "name": "kubawerlos/php-cs-fixer-custom-fixers",
-            "version": "v2.1.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers.git",
-                "reference": "59af5d2be00eb4ebd4d5d324ac5b9b777e623dba"
+                "reference": "e6c5a12f203916ee08c736501536ad25ecec0b2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/59af5d2be00eb4ebd4d5d324ac5b9b777e623dba",
-                "reference": "59af5d2be00eb4ebd4d5d324ac5b9b777e623dba",
+                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/e6c5a12f203916ee08c736501536ad25ecec0b2f",
+                "reference": "e6c5a12f203916ee08c736501536ad25ecec0b2f",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^2.16.1",
+                "friendsofphp/php-cs-fixer": "^2.16.2",
                 "php": "^7.2",
                 "symfony/finder": "^3.0 || ^4.0 || ^5.0"
             },
             "require-dev": {
                 "johnkary/phpunit-speedtrap": "^3.2.0",
-                "phpunit/phpunit": "^8.5.2 || ^9.0.1"
+                "phpunit/phpunit": "^8.5.3 || ^9.1.1"
             },
             "type": "library",
             "autoload": {
@@ -408,7 +408,7 @@
                 }
             ],
             "description": "A set of custom fixers for PHP CS Fixer",
-            "time": "2020-03-15T20:58:33+00:00"
+            "time": "2020-05-06T19:12:43+00:00"
         },
         {
             "name": "paragonie/random_compat",
