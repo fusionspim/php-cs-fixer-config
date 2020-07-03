@@ -176,7 +176,7 @@ class Factory
         return [
             CommentedOutFunctionFixer::name()                 => ['print_r', 'var_dump', 'var_export'],
             CommentSurroundedBySpacesFixer::name()            => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480
-            DataProviderNameFixer::name()                     => ['suffix' => '_data_provider'],
+            DataProviderNameFixer::name()                     => ['prefix' => '', 'suffix' => '_data_provider'],
             DataProviderReturnTypeFixer::name()               => true,
             InternalClassCasingFixer::name()                  => true,
             NoCommentedOutCodeFixer::name()                   => true,
