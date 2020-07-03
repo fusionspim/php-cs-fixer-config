@@ -2,7 +2,7 @@
 namespace FusionsPim\PhpCsFixer;
 
 use PhpCsFixer\{Config, Finder};
-use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, DataProviderReturnTypeFixer, InternalClassCasingFixer, NoCommentedOutCodeFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, PhpUnitNoUselessReturnFixer, PhpdocNoIncorrectVarAnnotationFixer, PhpdocSingleLineVarFixer, SingleSpaceAfterStatementFixer, SingleSpaceBeforeStatementFixer};
+use PhpCsFixerCustomFixers\Fixer\{CommentedOutFunctionFixer, CommentSurroundedBySpacesFixer, DataProviderNameFixer, DataProviderReturnTypeFixer, InternalClassCasingFixer, NoCommentedOutCodeFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedArrayKeyFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessSprintfFixer, PhpUnitNoUselessReturnFixer, PhpdocNoIncorrectVarAnnotationFixer, PhpdocSingleLineVarFixer, SingleSpaceAfterStatementFixer, SingleSpaceBeforeStatementFixer};
 use PhpCsFixerCustomFixers\Fixers;
 
 class Factory
@@ -174,11 +174,14 @@ class Factory
     private static function extraRules(): array
     {
         return [
+            CommentedOutFunctionFixer::name()                 => ['print_r', 'var_dump', 'var_export'],
             CommentSurroundedBySpacesFixer::name()            => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4480
+            DataProviderNameFixer::name()                     => ['suffix' => '_data_provider'],
             DataProviderReturnTypeFixer::name()               => true,
             InternalClassCasingFixer::name()                  => true,
             NoCommentedOutCodeFixer::name()                   => true,
             NoDoctrineMigrationsGeneratedCommentFixer::name() => true,
+            NoDuplicatedArrayKeyFixer::name()                 => true,
             NoDuplicatedImportsFixer::name()                  => true,
             NoPhpStormGeneratedCommentFixer::name()           => true,
             NoSuperfluousConcatenationFixer::name()           => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
