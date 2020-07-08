@@ -187,7 +187,7 @@ class Factory
             NoSuperfluousConcatenationFixer::name()           => true, // @see https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues/4491
             NoUselessCommentFixer::name()                     => true,
             NoUselessDoctrineRepositoryCommentFixer::name()   => true,
-            NoUselessParenthesisFixer::name()                 => true,
+            // NoUselessParenthesisFixer::name()                 => true, // Too many changes (we love a parenthesis!)
             NoUselessSprintfFixer::name()                     => true,
             NoUselessStrlenFixer::name()                      => true,
             PhpUnitNoUselessReturnFixer::name()               => true,
