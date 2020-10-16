@@ -129,7 +129,7 @@ class Factory
         return Config::create()
             ->setRiskyAllowed(true)
             ->registerCustomFixers(new Fixers)
-            ->setRules(\array_merge(static::DEFAULT_RULES, self::extraRules(), $overrideRules))
+            ->setRules(\array_replace(static::DEFAULT_RULES, self::extraRules(), $overrideRules))
             ->setUsingCache(true)
             ->setFinder($finder);
     }
