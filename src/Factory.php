@@ -37,7 +37,7 @@ class Factory
         'heredoc_indentation'                        => false, // Too many changes for now
         'heredoc_to_nowdoc'                          => false, // Too many changes for now
         'implode_call'                               => true,
-        'increment_style'                            => false, // Ignore forcing by @PhpCsFixer
+        'increment_style'                            => false, // Sometimes either is appropriate
         'linebreak_after_opening_tag'                => true,
         'logical_operators'                          => true,
         'method_argument_space'                      => ['on_multiline' => 'ignore'],
