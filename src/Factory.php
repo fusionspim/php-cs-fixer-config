@@ -31,6 +31,7 @@ class Factory
         'dir_constant'                               => true,
         'ereg_to_preg'                               => true,
         'error_suppression'                          => true,
+        'escape_implicit_backslashes'                => false, // Too many changes for now
         'function_to_constant'                       => true,
         'general_phpdoc_annotation_remove'           => ['annotations' => []],
         'heredoc_indentation'                        => false, // Too many changes for now
@@ -42,11 +43,16 @@ class Factory
         'method_argument_space'                      => ['on_multiline' => 'ignore'],
         'mb_str_functions'                           => true,
         'modernize_types_casting'                    => true,
+        'multiline_whitespace_before_semicolons'     => ['strategy' => 'no_multi_line'], // Supposedly the default, but doesn't behave as such?
         'new_with_braces'                            => false, // We prefer the opposite to @PhpCsFixer
         'no_alias_functions'                         => true,
+        'no_blank_lines_after_phpdoc'                => false, // Too many changes for now
         'no_blank_lines_before_namespace'            => true,
         'no_break_comment'                           => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
+        'no_extra_blank_lines'                       => false, // Too many changes for now
         'no_homoglyph_names'                         => true,
+        'no_multiline_whitespace_around_double_arrow'=> false, // Too many changes for now
+        'no_null_property_initialization'            => false, // Too many changes for now
         'no_php4_constructor'                        => true,
         'no_short_echo_tag'                          => false, // We prefer the opposite to @PhpCsFixer
         'no_unneeded_control_parentheses'            => [ // We occasionally use around `return`
@@ -92,6 +98,7 @@ class Factory
         'phpdoc_no_alias_tag'                        => false, // Later, avoiding changes for now
         'phpdoc_order'                               => false, // Later, avoiding changes for now
         'phpdoc_return_self_reference'               => false, // Later, avoiding changes for now
+        'phpdoc_separation'                          => false, // Later, avoiding changes for now
         'phpdoc_summary'                             => false, // Later, avoiding changes for now
         'phpdoc_to_comment'                          => false, // Later, avoiding changes for now
         'phpdoc_trim'                                => false, // Later, avoiding changes for now
@@ -103,6 +110,8 @@ class Factory
         'simplified_null_return'                     => true,
         'single_blank_line_before_namespace'         => false, // We prefer no_blank_lines_before_namespace
         'single_import_per_statement'                => false, // We like import grouping within the same namespace
+        'single_quote'                               => false, // Later, avoiding changes for now
+        'single_trait_insert_per_statement'          => false, // We like grouping traits in one statement
         'strict_comparison'                          => true,
         'ternary_to_null_coalescing'                 => true,
         'void_return'                                => true,
