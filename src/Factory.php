@@ -12,7 +12,6 @@ class Factory
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
     // @todo: Use https://mlocati.github.io/php-cs-fixer-configurator/#version:2.15|configurator and find gaps to plug
-    // @todo: Adopt the '@PhpCsFixer' preset (as the second rule), then remove inherited rules unless we differ
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
         '@PhpCsFixer'                                => true,
@@ -95,8 +94,6 @@ class Factory
         'phpdoc_return_self_reference'               => false, // Later, avoiding changes for now
         'phpdoc_summary'                             => false, // Later, avoiding changes for now
         'phpdoc_to_comment'                          => false, // Later, avoiding changes for now
-        'phpdoc_trim'                                => false, // Later, avoiding changes for now
-        'phpdoc_trim'                                => false, // Later, avoiding changes for now
         'phpdoc_trim'                                => false, // Later, avoiding changes for now
         'protected_to_private'                       => false,
         'psr4'                                       => true,
