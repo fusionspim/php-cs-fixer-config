@@ -11,7 +11,6 @@ class Factory
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
-    // @todo: Use https://mlocati.github.io/php-cs-fixer-configurator/#version:2.15|configurator and find gaps to plug
     // @todo: Adopt the '@PhpCsFixer' preset (as the second rule), then remove inherited rules unless we differ
     public const DEFAULT_RULES = [
         '@PSR2'                                      => true,
