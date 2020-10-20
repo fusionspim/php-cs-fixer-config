@@ -34,6 +34,12 @@ $finder = $config->getFinder()->name('*.phtml')->notName('Factory.php');
 return $config->setFinder($finder);
 ```
 
+## Improvements
+
+Pasting `Factory::DEFAULT_RULES` into [the PHP-CS-Fixer Configurator tool](https://mlocati.github.io/php-cs-fixer-configurator) lets you visually check all the available fixers and built-in presets. This helps identify newly introduced rules, and opportunities to tighten (or adopt defaults for) existing rules: 
+
+[![PHP-CS-Fixer Configurator](configurator.png)](https://mlocati.github.io/php-cs-fixer-configurator)
+
 ## Acknowledgements
 
 Inspired by [localheinz/php-cs-fixer-config](https://github.com/localheinz/php-cs-fixer-config) and [refinery29/php-cs-fixer-config](https://github.com/refinery29/php-cs-fixer-config).
