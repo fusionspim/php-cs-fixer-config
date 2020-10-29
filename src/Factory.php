@@ -58,7 +58,7 @@ class Factory
         'no_unreachable_default_argument_value'       => true,
         'non_printable_character'                     => false, // We have these in tests
         'not_operator_with_successor_space'           => true,
-        'ordered_class_elements'                      => [ // Default, except we don't order methods for now
+        'ordered_class_elements'                      => [ // Default, except we don't order methods (preferring to group related class methods, divided by large comment banners/headings)
             'use_trait',
             'constant_public',
             'constant_protected',
