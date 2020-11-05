@@ -15,6 +15,8 @@ class Factory
         '@PSR2'                                       => true,
         '@PhpCsFixer'                                 => true,
         '@PHPUnit75Migration:risky'                   => true,
+        '@PHP71Migration:risky'                       => true,
+        '@PHP73Migration'                             => true,
         'array_syntax'                                => ['syntax' => 'short'],
         'backtick_to_shell_exec'                      => true,
         'binary_operator_spaces'                      => ['default' => 'align_single_space'],
@@ -22,7 +24,6 @@ class Factory
         'blank_line_before_statement'                 => ['statements' => ['case', 'for', 'foreach', 'if', 'return', 'switch', 'try', 'while']],
         'class_attributes_separation'                 => ['elements' => ['method']], // We like to group const/property
         'class_keyword_remove'                        => false, // We like IDEs picking up usage via ::class
-        'combine_nested_dirname'                      => true,
         'comment_to_phpdoc'                           => true,
         'concat_space'                                => ['spacing' => 'one'],
         'date_time_immutable'                         => true,
@@ -99,10 +100,8 @@ class Factory
         'phpdoc_to_param_type'                        => false,
         'phpdoc_to_return_type'                       => false,
         'phpdoc_trim'                                 => false, // Later, avoiding changes for now
-        'pow_to_exponentiation'                       => true,
         'protected_to_private'                        => false,
         'psr4'                                        => true,
-        'random_api_migration'                        => true,
         'self_accessor'                               => true,
         'set_type_to_cast'                            => true,
         'simplified_null_return'                      => true,
@@ -111,8 +110,6 @@ class Factory
         'single_quote'                                => false, // Later, avoiding changes for now
         'single_trait_insert_per_statement'           => false, // We like grouping traits in one statement
         'strict_comparison'                           => true,
-        'ternary_to_null_coalescing'                  => true,
-        'void_return'                                 => true,
         'yoda_style'                                  => false, // We prefer the opposite to @PhpCsFixer
     ];
 
