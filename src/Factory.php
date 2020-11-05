@@ -55,6 +55,7 @@ class Factory
         'no_unneeded_control_parentheses'             => [ // We occasionally use around `return`
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
+        'no_unneeded_final_method'                    => true,
         'no_unreachable_default_argument_value'       => true,
         'non_printable_character'                     => false, // We have these in tests
         'not_operator_with_space'                     => false, // Conflicts with not_operator_with_successor_space
@@ -73,9 +74,11 @@ class Factory
             'phpunit',
         ],
         'ordered_imports'                             => ['importsOrder' => ['class', 'function', 'const'], 'sortAlgorithm' => 'alpha'],
+        'ordered_interfaces'                          => true,
         'php_unit_construct'                          => true,
         'php_unit_internal_class'                     => false, // We prefer the opposite to @PhpCsFixer
         'php_unit_method_casing'                      => ['case' => 'snake_case'],
+        'php_unit_mock_short_will_return'             => true,
         'php_unit_set_up_tear_down_visibility'        => true,
         'php_unit_size_class'                         => false, // We don't care about this
         'php_unit_strict'                             => true,
@@ -87,6 +90,7 @@ class Factory
         'protected_to_private'                        => false,
         'psr4'                                        => true,
         'self_accessor'                               => true,
+        'self_static_accessor'                        => true,
         'set_type_to_cast'                            => true,
         'simplified_null_return'                      => true,
         'single_blank_line_before_namespace'          => false, // We prefer no_blank_lines_before_namespace
