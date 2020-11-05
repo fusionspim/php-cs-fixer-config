@@ -100,7 +100,6 @@ class Factory
         'simplified_null_return'                      => true,
         'single_blank_line_before_namespace'          => false, // We prefer no_blank_lines_before_namespace
         'single_import_per_statement'                 => false, // We like import grouping within the same namespace
-        'single_quote'                                => false, // Later, avoiding changes for now
         'single_trait_insert_per_statement'           => false, // We like grouping traits in one statement
         'strict_comparison'                           => true,
         'yoda_style'                                  => false, // We prefer the opposite to @PhpCsFixer
