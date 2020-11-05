@@ -36,8 +36,6 @@ class Factory
         'fopen_flags'                                 => true,
         'function_to_constant'                        => true,
         'general_phpdoc_annotation_remove'            => ['annotations' => []],
-        'heredoc_indentation'                         => false, // Too many changes for now
-        'heredoc_to_nowdoc'                           => false, // Too many changes for now
         'implode_call'                                => true,
         'increment_style'                             => false, // Sometimes either is appropriate
         'is_null'                                     => ['use_yoda_style' => false],
