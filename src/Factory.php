@@ -11,7 +11,7 @@ class Factory
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
-    public const DEFAULT_RULES = [
+    public const DEFAULT_RULES = [ // We don't have '@PhpCsFixer:risky' enabled as we don't want the native/final rules or no_unset
         '@PSR2'                                       => true,
         '@PhpCsFixer'                                 => true,
         '@PHPUnit75Migration:risky'                   => true,
@@ -25,7 +25,7 @@ class Factory
         'class_attributes_separation'                 => ['elements' => ['method']], // We like to group const/property
         'class_keyword_remove'                        => false, // We like IDEs picking up usage via ::class
         'comment_to_phpdoc'                           => true,
-        'concat_space'                                => ['spacing' => 'one'],
+        'concat_space'                                => ['spacing' => 'one'], // Default is 'none'
         'date_time_immutable'                         => true,
         'declare_strict_types'                        => false,
         'dir_constant'                                => true,
