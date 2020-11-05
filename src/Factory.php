@@ -51,7 +51,6 @@ class Factory
         'no_blank_lines_before_namespace'             => true,
         'no_break_comment'                            => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
         'no_homoglyph_names'                          => true,
-        'no_multiline_whitespace_around_double_arrow' => false, // Too many changes for now
         'no_php4_constructor'                         => true,
         'no_short_echo_tag'                           => false, // We prefer the opposite to @PhpCsFixer
         'no_unneeded_control_parentheses'             => [ // We occasionally use around `return`
