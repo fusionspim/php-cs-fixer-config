@@ -22,6 +22,7 @@ class Factory
         'class_attributes_separation'                 => ['elements' => ['method']], // We like to group const/property
         'class_keyword_remove'                        => false, // We like IDEs picking up usage via ::class
         'combine_nested_dirname'                      => true,
+        'comment_to_phpdoc'                           => true,
         'concat_space'                                => ['spacing' => 'one'],
         'date_time_immutable'                         => true,
         'declare_strict_types'                        => false,
@@ -29,13 +30,17 @@ class Factory
         'ereg_to_preg'                                => true,
         'error_suppression'                           => true,
         'escape_implicit_backslashes'                 => false, // Too many changes for now
+        'fopen_flag_order'                            => true,
+        'fopen_flags'                                 => true,
         'function_to_constant'                        => true,
         'general_phpdoc_annotation_remove'            => ['annotations' => []],
         'heredoc_indentation'                         => false, // Too many changes for now
         'heredoc_to_nowdoc'                           => false, // Too many changes for now
         'implode_call'                                => true,
         'increment_style'                             => false, // Sometimes either is appropriate
+        'is_null'                                     => ['use_yoda_style' => false],
         'linebreak_after_opening_tag'                 => true,
+        'list_syntax'                                 => ['syntax' => 'short'],
         'logical_operators'                           => true,
         'method_argument_space'                       => ['on_multiline' => 'ignore'],
         'mb_str_functions'                            => true,
@@ -78,6 +83,7 @@ class Factory
         'php_unit_expectation'                        => true,
         'php_unit_internal_class'                     => false, // We prefer the opposite to @PhpCsFixer
         'php_unit_method_casing'                      => ['case' => 'snake_case'],
+        'php_unit_mock'                               => true,
         'php_unit_namespaced'                         => true,
         'php_unit_no_expectation_annotation'          => true,
         'php_unit_set_up_tear_down_visibility'        => true,
@@ -95,6 +101,8 @@ class Factory
         'phpdoc_separation'                           => false, // Later, avoiding changes for now
         'phpdoc_summary'                              => false, // Later, avoiding changes for now
         'phpdoc_to_comment'                           => false, // Later, avoiding changes for now
+        'phpdoc_to_param_type'                        => false,
+        'phpdoc_to_return_type'                       => false,
         'phpdoc_trim'                                 => false, // Later, avoiding changes for now
         'protected_to_private'                        => false,
         'psr4'                                        => true,
