@@ -117,7 +117,8 @@ class Factory
             ->in(getcwd())
             ->exclude(static::DEFAULT_EXCLUDED_DIRS)
             ->notName(static::DEFAULT_EXCLUDED_NAME)
-            ->name('*.phtml'); // PhpCsFixer adds *.php and *.phpt already
+            ->name('*.phtml') // PhpCsFixer adds *.php and *.phpt already
+            ->name('.php_cs.dist'); // @todo: has no effect since Finder ignores hidden files
 
         return Config::create()
             ->setRiskyAllowed(true)
