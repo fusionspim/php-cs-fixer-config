@@ -57,6 +57,7 @@ class Factory
         ],
         'no_unreachable_default_argument_value'       => true,
         'non_printable_character'                     => false, // We have these in tests
+        'not_operator_with_space'                     => false, // Conflicts with not_operator_with_successor_space
         'not_operator_with_successor_space'           => true,
         'ordered_class_elements'                      => [ // Default, except we don't order methods (preferring to group related class methods, divided by large comment banners/headings)
             'use_trait',
@@ -76,6 +77,7 @@ class Factory
         'php_unit_internal_class'                     => false, // We prefer the opposite to @PhpCsFixer
         'php_unit_method_casing'                      => ['case' => 'snake_case'],
         'php_unit_set_up_tear_down_visibility'        => true,
+        'php_unit_size_class'                         => false, // We don't care about this
         'php_unit_strict'                             => true,
         'php_unit_test_annotation'                    => true,
         'php_unit_test_class_requires_covers'         => false, // We prefer the opposite to @PhpCsFixer
@@ -89,6 +91,7 @@ class Factory
         'simplified_null_return'                      => true,
         'single_blank_line_before_namespace'          => false, // We prefer no_blank_lines_before_namespace
         'single_import_per_statement'                 => false, // We like import grouping within the same namespace
+        'single_line_throw'                           => false, // General soft line lengths cover this
         'single_trait_insert_per_statement'           => false, // We like grouping traits in one statement
         'strict_comparison'                           => true,
         'yoda_style'                                  => false, // We prefer the opposite to @PhpCsFixer
