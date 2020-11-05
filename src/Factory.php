@@ -31,7 +31,6 @@ class Factory
         'dir_constant'                                => true,
         'ereg_to_preg'                                => true,
         'error_suppression'                           => true,
-        'escape_implicit_backslashes'                 => false, // Too many changes for now
         'fopen_flag_order'                            => true,
         'fopen_flags'                                 => true,
         'function_to_constant'                        => true,
