@@ -99,6 +99,7 @@ class Factory
         'phpdoc_to_param_type'                        => false,
         'phpdoc_to_return_type'                       => false,
         'phpdoc_trim'                                 => false, // Later, avoiding changes for now
+        'pow_to_exponentiation'                       => true,
         'protected_to_private'                        => false,
         'psr4'                                        => true,
         'random_api_migration'                        => true,
