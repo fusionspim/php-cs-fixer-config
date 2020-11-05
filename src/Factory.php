@@ -48,10 +48,8 @@ class Factory
         'multiline_whitespace_before_semicolons'      => ['strategy' => 'no_multi_line'], // Supposedly the default, but doesn't behave as such?
         'new_with_braces'                             => false, // We prefer the opposite to @PhpCsFixer
         'no_alias_functions'                          => true,
-        'no_blank_lines_after_phpdoc'                 => false, // Too many changes for now
         'no_blank_lines_before_namespace'             => true,
         'no_break_comment'                            => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
-        'no_extra_blank_lines'                        => false, // Too many changes for now
         'no_homoglyph_names'                          => true,
         'no_multiline_whitespace_around_double_arrow' => false, // Too many changes for now
         'no_null_property_initialization'             => false, // Too many changes for now
