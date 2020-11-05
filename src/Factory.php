@@ -14,6 +14,7 @@ class Factory
     public const DEFAULT_RULES = [
         '@PSR2'                                       => true,
         '@PhpCsFixer'                                 => true,
+        '@PHPUnit75Migration:risky'                   => true,
         'array_syntax'                                => ['syntax' => 'short'],
         'backtick_to_shell_exec'                      => true,
         'binary_operator_spaces'                      => ['default' => 'align_single_space'],
@@ -78,14 +79,8 @@ class Factory
         ],
         'ordered_imports'                             => ['importsOrder' => ['class', 'function', 'const'], 'sortAlgorithm' => 'alpha'],
         'php_unit_construct'                          => true,
-        'php_unit_dedicate_assert'                    => true,
-        'php_unit_dedicate_assert_internal_type'      => true,
-        'php_unit_expectation'                        => true,
         'php_unit_internal_class'                     => false, // We prefer the opposite to @PhpCsFixer
         'php_unit_method_casing'                      => ['case' => 'snake_case'],
-        'php_unit_mock'                               => true,
-        'php_unit_namespaced'                         => true,
-        'php_unit_no_expectation_annotation'          => true,
         'php_unit_set_up_tear_down_visibility'        => true,
         'php_unit_strict'                             => true,
         'php_unit_test_annotation'                    => true,
