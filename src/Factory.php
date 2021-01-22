@@ -29,6 +29,7 @@ class Factory
         'date_time_immutable'                         => true,
         'declare_strict_types'                        => false,
         'dir_constant'                                => true,
+        'echo_tag_syntax'                             => ['format' => 'short'],
         'ereg_to_preg'                                => true,
         'error_suppression'                           => true,
         'fopen_flag_order'                            => true,
