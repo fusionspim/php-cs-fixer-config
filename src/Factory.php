@@ -76,7 +76,7 @@ class Factory
         ],
         'ordered_imports'                             => ['importsOrder' => ['class', 'function', 'const'], 'sortAlgorithm' => 'alpha'],
         'ordered_interfaces'                          => true,
-        'operator_linebreak'                          => ['position' => 'end'], // We prefer the opposite to @PhpCsFixer
+        'operator_linebreak'                          => ['only_booleans' => true, 'position' => 'end'], // We prefer the opposite to @PhpCsFixer
         'php_unit_construct'                          => true,
         'php_unit_internal_class'                     => false, // We prefer the opposite to @PhpCsFixer
         'php_unit_method_casing'                      => ['case' => 'snake_case'],
