@@ -17,6 +17,7 @@ class Factory
         '@PHPUnit75Migration:risky'                   => true,
         '@PHP71Migration:risky'                       => true,
         '@PHP73Migration'                             => true,
+        'array_push'                                  => true,
         'array_syntax'                                => ['syntax' => 'short'],
         'backtick_to_shell_exec'                      => true,
         'binary_operator_spaces'                      => ['default' => 'align_single_space'],
@@ -36,6 +37,7 @@ class Factory
         'fopen_flags'                                 => true,
         'function_to_constant'                        => true,
         'general_phpdoc_annotation_remove'            => ['annotations' => []],
+        'group_import'                                => true,
         'implode_call'                                => true,
         'increment_style'                             => false, // Sometimes either is appropriate
         'is_null'                                     => ['use_yoda_style' => false],
@@ -76,6 +78,7 @@ class Factory
         ],
         'ordered_imports'                             => ['importsOrder' => ['class', 'function', 'const'], 'sortAlgorithm' => 'alpha'],
         'ordered_interfaces'                          => true,
+        'ordered_traits'                              => true,
         'operator_linebreak'                          => ['only_booleans' => true, 'position' => 'end'], // We prefer the opposite to @PhpCsFixer
         'php_unit_construct'                          => true,
         'php_unit_internal_class'                     => false, // We prefer the opposite to @PhpCsFixer
@@ -90,16 +93,19 @@ class Factory
         'phpdoc_to_param_type'                        => true,
         'phpdoc_to_return_type'                       => true,
         'protected_to_private'                        => false,
-        'psr4'                                        => true,
+        'psr_autoloading'                             => true,
+        'regular_callable_call'                       => true,
         'self_accessor'                               => true,
         'self_static_accessor'                        => true,
         'set_type_to_cast'                            => true,
+        'simplified_if_return'                        => true,
         'simplified_null_return'                      => true,
         'single_blank_line_before_namespace'          => false, // We prefer no_blank_lines_before_namespace
         'single_import_per_statement'                 => false, // We like import grouping within the same namespace
         'single_line_throw'                           => false, // General soft line lengths cover this
         'single_trait_insert_per_statement'           => false, // We like grouping traits in one statement
         'strict_comparison'                           => true,
+        'use_arrow_functions'                         => true,
         'yoda_style'                                  => false, // We prefer the opposite to @PhpCsFixer
     ];
 
