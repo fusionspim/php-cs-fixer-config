@@ -8,10 +8,10 @@
   "license": "MIT",
   "require": {
     "php": ">=7.4",
-    "kubawerlos/php-cs-fixer-custom-fixers": "^2.1.0"
+    "kubawerlos/php-cs-fixer-custom-fixers": "^2.5"
   },
   "require-dev": {
-    "ergebnis/composer-normalize": "^2.6"
+    "ergebnis/composer-normalize": "^2.13"
   },
   "autoload": {
     "psr-4": {
