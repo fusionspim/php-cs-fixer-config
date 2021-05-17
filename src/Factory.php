@@ -2,7 +2,7 @@
 namespace FusionsPim\PhpCsFixer;
 
 use PhpCsFixer\{Config, Finder};
-use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, CommentedOutFunctionFixer, DataProviderNameFixer, DataProviderReturnTypeFixer, InternalClassCasingFixer, NoCommentedOutCodeFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedArrayKeyFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessParenthesisFixer, NoUselessSprintfFixer, NoUselessStrlenFixer, PhpUnitNoUselessReturnFixer, PhpdocNoIncorrectVarAnnotationFixer, PhpdocSingleLineVarFixer, SingleSpaceAfterStatementFixer, SingleSpaceBeforeStatementFixer};
+use PhpCsFixerCustomFixers\Fixer\{CommentSurroundedBySpacesFixer, CommentedOutFunctionFixer, DataProviderNameFixer, DataProviderReturnTypeFixer, InternalClassCasingFixer, NoCommentedOutCodeFixer, NoDoctrineMigrationsGeneratedCommentFixer, NoDuplicatedArrayKeyFixer, NoDuplicatedImportsFixer, NoPhpStormGeneratedCommentFixer, NoSuperfluousConcatenationFixer, NoUselessCommentFixer, NoUselessDoctrineRepositoryCommentFixer, NoUselessParenthesisFixer, NoUselessStrlenFixer, PhpUnitNoUselessReturnFixer, PhpdocNoIncorrectVarAnnotationFixer, PhpdocSingleLineVarFixer, SingleSpaceAfterStatementFixer, SingleSpaceBeforeStatementFixer};
 use PhpCsFixerCustomFixers\Fixers;
 
 class Factory
@@ -18,19 +18,18 @@ class Factory
         '@PHP71Migration:risky'                       => true,
         '@PHP73Migration'                             => true,
         'array_push'                                  => true,
-        'array_syntax'                                => ['syntax' => 'short'],
         'backtick_to_shell_exec'                      => true,
         'binary_operator_spaces'                      => ['default' => 'align_single_space'],
         'blank_line_after_opening_tag'                => false, // We prefer the opposite to @PhpCsFixer
         'blank_line_before_statement'                 => ['statements' => ['case', 'for', 'foreach', 'if', 'return', 'switch', 'try', 'while']],
-        'class_attributes_separation'                 => ['elements' => ['method']], // We like to group const/property
+        'class_attributes_separation'                 => ['elements' => ['method' => 'one']], // We like to group const/property
         'class_keyword_remove'                        => false, // We like IDEs picking up usage via ::class
         'comment_to_phpdoc'                           => true,
         'concat_space'                                => ['spacing' => 'one'], // Default is 'none'
         'date_time_immutable'                         => true,
         'declare_strict_types'                        => false,
         'dir_constant'                                => true,
-        'echo_tag_syntax'                             => ['format' => 'short'],
+        'echo_tag_syntax'                             => ['format' => 'short'], // We prefer the opposite to @PhpCsFixer
         'ereg_to_preg'                                => true,
         'error_suppression'                           => true,
         'fopen_flag_order'                            => true,
@@ -40,9 +39,8 @@ class Factory
         'group_import'                                => true,
         'implode_call'                                => true,
         'increment_style'                             => false, // Sometimes either is appropriate
-        'is_null'                                     => ['use_yoda_style' => false],
+        'is_null'                                     => true,
         'linebreak_after_opening_tag'                 => true,
-        'list_syntax'                                 => ['syntax' => 'short'],
         'logical_operators'                           => true,
         'method_argument_space'                       => ['on_multiline' => 'ignore'],
         'mb_str_functions'                            => true,
@@ -54,29 +52,31 @@ class Factory
         'no_break_comment'                            => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
         'no_homoglyph_names'                          => true,
         'no_php4_constructor'                         => true,
-        'no_short_echo_tag'                           => false, // We prefer the opposite to @PhpCsFixer
         'no_unneeded_control_parentheses'             => [ // We occasionally use around `return`
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
         'no_unneeded_final_method'                    => true,
         'no_unreachable_default_argument_value'       => true,
+        'no_useless_sprintf'                          => true,
         'non_printable_character'                     => false, // We have these in tests
         'not_operator_with_space'                     => false, // Conflicts with not_operator_with_successor_space
         'not_operator_with_successor_space'           => true,
-        'ordered_class_elements'                      => [ // Default, except we don't order methods (preferring to group related class methods, divided by large comment banners/headings)
-            'use_trait',
-            'constant_public',
-            'constant_protected',
-            'constant_private',
-            'property_public',
-            'property_protected',
-            'property_private',
-            'construct',
-            'destruct',
-            'magic',
-            'phpunit',
+        'ordered_class_elements'                      => [
+            'order' => [ // Default, except we don't order methods (preferring to group related class methods, divided by large comment banners/headings)
+                'use_trait',
+                'constant_public',
+                'constant_protected',
+                'constant_private',
+                'property_public',
+                'property_protected',
+                'property_private',
+                'construct',
+                'destruct',
+                'magic',
+                'phpunit',
+            ],
         ],
-        'ordered_imports'                             => ['importsOrder' => ['class', 'function', 'const'], 'sortAlgorithm' => 'alpha'],
+        'ordered_imports'                             => ['imports_order' => ['class', 'function', 'const'], 'sort_algorithm' => 'alpha'],
         'ordered_interfaces'                          => true,
         'ordered_traits'                              => true,
         'operator_linebreak'                          => ['only_booleans' => true, 'position' => 'end'], // We prefer the opposite to @PhpCsFixer
@@ -118,12 +118,14 @@ class Factory
             ->name('*.phtml') // PhpCsFixer adds *.php and *.phpt already
             ->name('.php_cs.dist'); // @todo: has no effect since Finder ignores hidden files
 
-        return Config::create()
-            ->setRiskyAllowed(true)
+        $config = new Config;
+        $config->setRiskyAllowed(true)
             ->registerCustomFixers(new Fixers)
             ->setRules(\array_replace(static::DEFAULT_RULES, self::extraRules(), $overrideRules))
             ->setUsingCache(true)
             ->setFinder($finder);
+
+        return $config;
     }
 
     // Hopefully these'll be merged into PHP CS Fixer? https://github.com/kubawerlos/php-cs-fixer-custom-fixers/issues/128
@@ -144,7 +146,6 @@ class Factory
             NoUselessCommentFixer::name()                     => true,
             NoUselessDoctrineRepositoryCommentFixer::name()   => true,
             // NoUselessParenthesisFixer::name()                 => true, // Too many changes (we love a parenthesis!)
-            NoUselessSprintfFixer::name()                     => true,
             NoUselessStrlenFixer::name()                      => true,
             PhpUnitNoUselessReturnFixer::name()               => true,
             PhpdocNoIncorrectVarAnnotationFixer::name()       => true,
