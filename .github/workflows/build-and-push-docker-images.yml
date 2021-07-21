@@ -3,10 +3,10 @@ name: "Build and Push Docker Images"
 on:
   workflow_dispatch:
   push:
-#    branches:
-#      - master
-#    paths:
-#      - 'docker/**'
+    branches:
+      - master
+    paths:
+      - 'docker/**'
 
 jobs:
   build-and-push:
