@@ -23,10 +23,11 @@ class Factory
         'blank_line_after_opening_tag'                => false, // We prefer the opposite to @PhpCsFixer
         'blank_line_before_statement'                 => ['statements' => ['case', 'for', 'foreach', 'if', 'return', 'switch', 'try', 'while']],
         'class_attributes_separation'                 => ['elements' => ['method' => 'one']], // We like to group const/property
-        'class_keyword_remove'                        => false, // We like IDEs picking up usage via ::class
+        'class_keyword_remove'                        => false, // We like IDEs picking up usage via ::class (deprecated since 3.1.0)
         'comment_to_phpdoc'                           => true,
         'concat_space'                                => ['spacing' => 'one'], // Default is 'none'
         'date_time_immutable'                         => true,
+        'declare_parentheses'                         => true,
         'declare_strict_types'                        => false,
         'dir_constant'                                => true,
         'echo_tag_syntax'                             => ['format' => 'short'], // We prefer the opposite to @PhpCsFixer
@@ -52,16 +53,18 @@ class Factory
         'no_break_comment'                            => false, // We prefer the opposite to @PSR2 and @PhpCsFixer
         'no_homoglyph_names'                          => true,
         'no_php4_constructor'                         => true,
+        'no_trailing_whitespace_in_string'            => true,
         'no_unneeded_control_parentheses'             => [ // We occasionally use around `return`
             'statements' => ['break', 'clone', 'continue', 'echo_print', 'switch_case', 'yield'],
         ],
-        'no_unneeded_final_method'                    => true,
-        'no_unreachable_default_argument_value'       => true,
-        'no_useless_sprintf'                          => true,
-        'non_printable_character'                     => false, // We have these in tests
-        'not_operator_with_space'                     => false, // Conflicts with not_operator_with_successor_space
-        'not_operator_with_successor_space'           => true,
-        'ordered_class_elements'                      => [
+        'no_unneeded_final_method'                         => true,
+        'no_unreachable_default_argument_value'            => true,
+        'no_useless_sprintf'                               => true,
+        'non_printable_character'                          => false, // We have these in tests
+        'not_operator_with_space'                          => false, // Conflicts with not_operator_with_successor_space
+        'not_operator_with_successor_space'                => true,
+        'nullable_type_declaration_for_default_null_value' => true,
+        'ordered_class_elements'                           => [
             'order' => [ // Default, except we don't order methods (preferring to group related class methods, divided by large comment banners/headings)
                 'use_trait',
                 'constant_public',
@@ -88,8 +91,11 @@ class Factory
         'php_unit_size_class'                         => false, // We don't care about this
         'php_unit_strict'                             => true,
         'php_unit_test_annotation'                    => true,
+        'php_unit_test_case_static_method_calls'      => ['call_type' => 'this'],
         'php_unit_test_class_requires_covers'         => false, // We prefer the opposite to @PhpCsFixer
+        'phpdoc_tag_casing'                           => true,
         'phpdoc_summary'                              => false, // We prefer the opposite to @PhpCsFixer
+        'phpdoc_line_span'                            => ['const' => 'single', 'method' => 'single', 'property' => 'single'],
         'phpdoc_to_param_type'                        => true,
         'phpdoc_to_return_type'                       => true,
         'protected_to_private'                        => false,
@@ -104,8 +110,12 @@ class Factory
         'single_import_per_statement'                 => false, // We like import grouping within the same namespace
         'single_line_throw'                           => false, // General soft line lengths cover this
         'single_trait_insert_per_statement'           => false, // We like grouping traits in one statement
+        'static_lambda'                               => true,
         'strict_comparison'                           => true,
+        'strict_param'                                => true,
+        'string_line_ending'                          => true,
         'use_arrow_functions'                         => true,
+        'ternary_to_elvis_operator'                   => true,
         'yoda_style'                                  => false, // We prefer the opposite to @PhpCsFixer
     ];
 
