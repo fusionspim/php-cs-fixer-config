@@ -110,7 +110,7 @@ class Factory
         'single_import_per_statement'                 => false, // We like import grouping within the same namespace
         'single_line_throw'                           => false, // General soft line lengths cover this
         'single_trait_insert_per_statement'           => false, // We like grouping traits in one statement
-        'static_lambda'                               => true,
+        'static_lambda'                               => false, // We don't see any value in this
         'strict_comparison'                           => true,
         'strict_param'                                => true,
         'string_line_ending'                          => true,
