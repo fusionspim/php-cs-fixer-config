@@ -11,7 +11,7 @@ class Factory
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
-    public const DEFAULT_INCLUDED_NAME = ['*.phtml', '*.phpt', '/\.php$/']; // PhpCsFixer adds *.php already, but we add it again to avoid a bug (https://github.com/symfony/symfony/issues/42675 fixed) where hidden/dot files are missed
+    public const DEFAULT_INCLUDED_NAME = ['*.phtml', '*.phpt', '/\.php$/']; // PhpCsFixer adds *.php already (@todo: remove '/\.php$/' once https://github.com/symfony/symfony/issues/42675 fixed)
 
     public const DEFAULT_RULES = [ // We don't have '@PhpCsFixer:risky' enabled as we don't want the native/final rules or no_unset
         '@PSR2'                                       => true,
