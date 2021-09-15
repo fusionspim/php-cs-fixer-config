@@ -128,7 +128,7 @@ class Factory
             ->exclude(static::DEFAULT_EXCLUDED_DIRS)
             ->notName(static::DEFAULT_EXCLUDED_NAME)
             ->name(static::DEFAULT_INCLUDED_NAME)
-            ->ignoreDotFiles(false);
+            ->ignoreDotFiles(false); // Mainly to avoid missing `.php-cs-fixer.dist.php`
 
         $config = new Config;
         $config->setRiskyAllowed(true)
