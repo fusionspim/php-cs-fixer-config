@@ -11,6 +11,8 @@ class Factory
 
     public const DEFAULT_EXCLUDED_NAME = 'AcceptanceTesterActions.php'; // Annotated with @codingStandardsIgnoreFile
 
+    public const DEFAULT_INCLUDED_NAME = ['*.phtml', '*.phpt', '/\.php$/']; // PhpCsFixer adds *.php already (@todo: remove '/\.php$/' once https://github.com/symfony/symfony/issues/42675 fixed)
+
     public const DEFAULT_RULES = [ // We don't have '@PhpCsFixer:risky' enabled as we don't want the native/final rules or no_unset
         '@PSR2'                                       => true,
         '@PhpCsFixer'                                 => true,
@@ -125,8 +127,8 @@ class Factory
             ->in(getcwd())
             ->exclude(static::DEFAULT_EXCLUDED_DIRS)
             ->notName(static::DEFAULT_EXCLUDED_NAME)
-            ->name('*.phtml') // PhpCsFixer adds *.php and *.phpt already
-            ->name('.php_cs.dist'); // @todo: has no effect since Finder ignores hidden files
+            ->name(static::DEFAULT_INCLUDED_NAME)
+            ->ignoreDotFiles(false); // Mainly to avoid missing `.php-cs-fixer.dist.php`
 
         $config = new Config;
         $config->setRiskyAllowed(true)

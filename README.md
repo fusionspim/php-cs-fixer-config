@@ -15,6 +15,8 @@ Create a configuration file `.php-cs-fixer.dist.php` in the root of your project
 return FusionsPim\PhpCsFixer\Factory::fromDefaults();
 ```
 
+### Rules
+
 The default rules can be overridden within your project, by passing an optional array:
 
 ```php
@@ -24,7 +26,9 @@ return FusionsPim\PhpCsFixer\Factory::fromDefaults([
 ]);
 ```
 
-All `.php` files within your project root are checked (other than those in `Factory::DEFAULT_EXCLUDED_DIRS` or named `Factory::DEFAULT_EXCLUDED_NAME`) though `Finder` can easily be reconfigured for your project:
+### Files
+
+All `.php`, `.phtml` and `.phpt` files within your project root are checked (other than those in `Factory::DEFAULT_EXCLUDED_DIRS` or named `Factory::DEFAULT_EXCLUDED_NAME`) though `Finder` can easily be reconfigured for your project:
 
 ```php
 <?php
