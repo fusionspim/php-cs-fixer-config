@@ -395,16 +395,16 @@
         },
         {
             "name": "kubawerlos/php-cs-fixer-custom-fixers",
-            "version": "v3.2.1",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers.git",
-                "reference": "541984e27bddfb13cfb330ef3e6d1f22f015f45a"
+                "reference": "b124a1cc8a213beb478aece20d2c3a80f31a0c79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/541984e27bddfb13cfb330ef3e6d1f22f015f45a",
-                "reference": "541984e27bddfb13cfb330ef3e6d1f22f015f45a",
+                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/b124a1cc8a213beb478aece20d2c3a80f31a0c79",
+                "reference": "b124a1cc8a213beb478aece20d2c3a80f31a0c79",
                 "shasum": ""
             },
             "require": {
@@ -436,9 +436,9 @@
             "description": "A set of custom fixers for PHP CS Fixer",
             "support": {
                 "issues": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/issues",
-                "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.2.1"
+                "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.3.0"
             },
-            "time": "2021-11-08T06:57:00+00:00"
+            "time": "2021-11-16T21:28:43+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
