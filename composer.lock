@@ -463,23 +463,23 @@
         },
         {
             "name": "kubawerlos/php-cs-fixer-custom-fixers",
-            "version": "v3.7.2",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers.git",
-                "reference": "8e20e24a47f1750b37eb84d0a8f4df2979348433"
+                "reference": "3d4af3ed3077cdc613d086209678a31fdbedb0bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/8e20e24a47f1750b37eb84d0a8f4df2979348433",
-                "reference": "8e20e24a47f1750b37eb84d0a8f4df2979348433",
+                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/3d4af3ed3077cdc613d086209678a31fdbedb0bb",
+                "reference": "3d4af3ed3077cdc613d086209678a31fdbedb0bb",
                 "shasum": ""
             },
             "require": {
                 "ext-filter": "*",
                 "ext-tokenizer": "*",
-                "friendsofphp/php-cs-fixer": "^3.1.0",
-                "php": "^7.2 || ^8.0",
+                "friendsofphp/php-cs-fixer": "^3.6.0",
+                "php": "^7.4 || ^8.0",
                 "symfony/finder": "^4.0 || ^5.0 || ^6.0"
             },
             "require-dev": {
@@ -504,9 +504,9 @@
             "description": "A set of custom fixers for PHP CS Fixer",
             "support": {
                 "issues": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/issues",
-                "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.7.2"
+                "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.8.0"
             },
-            "time": "2022-02-04T17:21:48+00:00"
+            "time": "2022-02-13T10:56:46+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
@@ -1564,12 +1564,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Mbstring\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Mbstring\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
