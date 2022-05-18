@@ -463,16 +463,16 @@
         },
         {
             "name": "kubawerlos/php-cs-fixer-custom-fixers",
-            "version": "v3.10.1",
+            "version": "v3.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers.git",
-                "reference": "1a380cb6af607b11676c43386985f497442f0928"
+                "reference": "5da90c8e5dc3c9b1fe439e38d6461765e933cb80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/1a380cb6af607b11676c43386985f497442f0928",
-                "reference": "1a380cb6af607b11676c43386985f497442f0928",
+                "url": "https://api.github.com/repos/kubawerlos/php-cs-fixer-custom-fixers/zipball/5da90c8e5dc3c9b1fe439e38d6461765e933cb80",
+                "reference": "5da90c8e5dc3c9b1fe439e38d6461765e933cb80",
                 "shasum": ""
             },
             "require": {
@@ -484,7 +484,7 @@
                 "friendsofphp/php-cs-fixer": "<3.6.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^8.5.3 || ^9.1.1"
+                "phpunit/phpunit": "^9.5.20"
             },
             "type": "library",
             "autoload": {
@@ -505,9 +505,9 @@
             "description": "A set of custom fixers for PHP CS Fixer",
             "support": {
                 "issues": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/issues",
-                "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.10.1"
+                "source": "https://github.com/kubawerlos/php-cs-fixer-custom-fixers/tree/v3.10.2"
             },
-            "time": "2022-03-27T08:23:29+00:00"
+            "time": "2022-05-17T16:09:51+00:00"
         },
         {
             "name": "php-cs-fixer/diff",
